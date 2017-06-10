@@ -1,0 +1,52 @@
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+	
+	<!-- **/ Name \** -->
+	<div class="form-group">
+		{{ form_label(form.name) }}	
+		{% if form_errors(form.name)|length > 0 %}
+			<div class="alert alert-danger" role="alert">
+				{{ form_errors(form.name) }}
+			</div>
+		{% endif %}			
+		{{ form_widget(form.name) }}
+	</div>
+	
+	
+	<!-- **/ Price \** -->
+	{{ form_label(form.price) }}
+	{% if form_errors(form.price)|length > 0 %}
+		<div class="alert alert-danger" role="alert">
+			{{ form_errors(form.price) }}
+		</div>
+	{% endif %}
+
+	<div class="form-group">
+		<div class="input-group">
+			<span class="input-group-addon">$</span>
+			{{ form_widget(form.price) }}
+		</div>
+	</div>
+
+
+	<!-- **/ Description \** -->
+	<div class="form-group">
+		{{ form_label(form.description) }}
+		{% if form_errors(form.description)|length > 0 %}
+			<div class="alert alert-danger" role="alert">
+				{{ form_errors(form.description) }}
+			</div>
+		{% endif %}
+		{{ form_widget(form.description) }}
+	</div>
+	
+
+	<!-- **/ Category \** -->
+	<div class="form-group">
+		{{ form_label(form.category) }}
+		{{ form_errors(form.category) }}
+		{{ form_widget(form.category) }}
+	</div>
+
+	{{ form_widget(form.save) }}
+	
+{{ form_end(form) }} 

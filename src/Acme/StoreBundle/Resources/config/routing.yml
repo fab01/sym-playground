@@ -1,0 +1,54 @@
+acme_store_homepage:
+    path:     /
+    defaults: { _controller: AcmeStoreBundle:Default:index }
+
+
+
+
+acme_store_product_show_all:
+    path:     /product/showall
+    defaults: { _controller: AcmeStoreBundle:Product:showAll }
+
+acme_store_product_create:
+    path:     /product/create
+    defaults: { _controller: AcmeStoreBundle:Product:createProduct }
+
+acme_store_product_update:
+    path:     /product/update/{id}
+    defaults: { _controller: AcmeStoreBundle:Product:updateProduct }
+
+acme_store_product_delete:
+    path:     /product/delete/{id}
+    defaults: { _controller: AcmeStoreBundle:Product:deleteProduct }
+
+
+
+
+acme_store_category_show_all:
+    path:     /category/showall
+    defaults: { _controller: AcmeStoreBundle:Category:showAll }
+
+acme_store_category_create:
+    path:     /category/create
+    defaults: { _controller: AcmeStoreBundle:Category:createCategory }
+
+acme_store_category_update:
+    path:     /category/update/{id}
+    defaults: { _controller: AcmeStoreBundle:Category:updateCategory }
+
+acme_store_category_delete:
+    path:     /category/delete/{id}
+    defaults: { _controller: AcmeStoreBundle:Category:deleteCategory }
+
+
+
+
+acme_store_show:
+    path:     /show/{id}
+    defaults: { _controller: AcmeStoreBundle:Default:show }
+    requirements:
+        id: \d+
+
+acme_store_create_product_by_category:
+    path:     /create/newproduct
+    defaults: { _controller: AcmeStoreBundle:Default:createProduct }

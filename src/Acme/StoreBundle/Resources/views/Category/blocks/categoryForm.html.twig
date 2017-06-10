@@ -1,0 +1,16 @@
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+	
+	<!-- **/ Name \** -->
+	<div class="form-group">
+		{{ form_label(form.name) }}	
+		{% if form_errors(form.name)|length > 0 %}
+			<div class="alert alert-danger" role="alert">
+				{{ form_errors(form.name) }}
+			</div>
+		{% endif %}			
+		{{ form_widget(form.name) }}
+	</div>
+	
+	{{ form_widget(form.save) }}
+	
+{{ form_end(form) }} 

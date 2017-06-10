@@ -1,0 +1,7 @@
+acme_store:
+    resource: "@AcmeStoreBundle/Resources/config/routing.yml"
+    prefix:   /store
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

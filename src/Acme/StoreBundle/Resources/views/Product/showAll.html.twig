@@ -1,0 +1,56 @@
+{% extends 'AcmeStoreBundle::layout.html.twig' %}
+
+{% block title %}Show all products{% endblock %}
+
+{% block body %}
+	
+	<div class="panel panel-default">
+
+		<!-- Default panel contents -->
+		<div class="panel-heading">List products</div>
+
+		<!-- Table -->
+		<table class="table table-hover">
+
+			<thead>		
+				<th>Name</th>
+				<th>Price</th>
+				<th>Category</th>
+				<th></th>
+			</thead>
+			
+			<tbody>
+	
+				{% for product in products %}
+					<tr>
+						<td>{{product.name}}</td>
+						<td>{{product.price}}</td>
+						<td>{{product.category}}</td>
+
+
+						<!-- **/ Pusanti Actions \** -->
+						<td>
+							<div class="btn-group pull-right">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Action <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="{{ url('acme_store_product_update', {'id':product.id}) }}">Edit</a></li>
+									<li><a href="#" data-href="{{ url('acme_store_product_delete', {'id':product.id}) }}" data-toggle="modal" data-target="#confirm-delete">Delete</a></li>
+									<li><a href="#">Disable</a></li>
+								</ul>
+							</div>
+						</td>
+						<!-- **\ Pusanti Actions /** -->
+
+					</tr>
+				{% endfor %}
+
+			</tbody>
+		</table>
+
+		{% include 'AcmeStoreBundle:Blocks:confirmDelete.html.twig' %}
+	
+	</div>
+
+{% endblock %}

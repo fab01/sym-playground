@@ -1,0 +1,19 @@
+Acme\StoreBundle\Entity\Product:
+
+  getters:
+    priceLegal:
+       - 'IsTrue': { message: "The value is not a valid float" }
+
+  properties:
+    name:
+     - NotBlank: { message: "Please provide a fullname" }
+    description:
+     - NotBlank: { message: "Fill the description field" }
+
+
+
+
+Acme\StoreBundle\Entity\Category:
+  properties:
+    name:
+     - NotBlank: ~
