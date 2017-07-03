@@ -22,10 +22,7 @@ class ProductController extends Controller
         return $this->render('AcmeStoreBundle:Product:showAll.html.twig', array('products' => $products));
     }
 
-
-
 	/* CREATE PRODUCT */
-
 	/* Build Add Product Form */
     public function createProductAction(Request $request)
     {
@@ -85,9 +82,7 @@ class ProductController extends Controller
         }
     }
 
-
-    /* UPDATE PRODUCT */
-    
+    # UPDATE PRODUCT
     /* Build Update Product Form */  
     public function updateProductAction(Request $request, $id)
     {
@@ -117,7 +112,7 @@ class ProductController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $category = $em->getRepository("AcmeStoreBundle:Category")->find($formVars['category']);
-        $product  = $em->getRepository('AcmeStoreBundle:Product')->find($id);    
+        $product  = $em->getRepository('AcmeStoreBundle:Product')->find($id);
         
         $product->setName($formVars['name']);
         $product->setPrice($formVars['price']);
@@ -145,10 +140,7 @@ class ProductController extends Controller
         return $this->redirect($this->generateUrl('acme_store_product_update', array('id' => $id ) ) );      
     }
 
-
-
     /* DELETE PRODUCT */
-
     /* Exec Delete Product Statements */
     public function deleteProductAction($id)
     {
@@ -166,8 +158,3 @@ class ProductController extends Controller
         return $this->redirect($this->generateUrl('acme_store_product_show_all'));
     }
 }
-
-
-
-
-
