@@ -1,3 +1,6 @@
-<h1>Catalogue Bundle</h1>
+<h1>Store Bundle</h1>
+<h3>Bundle Readjusted for Symfony 3</h3>
 
-A Symfony bundle created on May 1, 2016, 4:53 pm.
+AcmeStoreBundle is a bundle that I created to make some gym with Symfony.<br />
+The very first version was built on Symfony 2.3 and, just recently it has been readjusted for Symfony 3.
+
