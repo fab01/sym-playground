@@ -1,3 +1,3 @@
-pro_scheduler
+<h1>Catalogue Bundle</h1>
 
-A Symfony project created on May 1, 2016, 4:53 pm.
+A Symfony bundle created on May 1, 2016, 4:53 pm.
